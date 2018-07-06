@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body>
+    <h2><%= title %></h2>
+    
+
+
+
+
+<div class="pgContato">
+
+   <div class="contato">
+
+      <div class="formContato">
+
+         <form action="<%= action %>" id="formContato" tabindex="1" action="#" method="post">
+
+            <input id="nome" name="nome" type="text" placeholder="Nome" value="<%= doc.nome %>" /> 
+
+            <input id="telefone" name="telefone" type="number" placeholder="telefone" value="<%= doc.telefone %>" />
+
+            <input id="email" name="email" type="email" placeholder="E-mail" value="<%= doc.email %>" />
+
+            <input id="nome" name="idade" type="number" placeholder="Idade" value="<%= doc.idade %>" />
+
+             <input id="funcao" name="funcao" type="text" placeholder="Função" value="<%= doc.funcao %>" />
+
+            <button class="botaoContato" type="submit">Enviar</button>
+
+         </form>
+
+      </div>
+
+   </div>
+
+</div>
+
+  </body>
+</html>

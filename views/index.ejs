@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+  </head>
+  <body>
+    <h2><%= title %></h2>
+    <ul>
+   <% docs.forEach(function(customer){ %>
+      <ul class="collection with-header">
+    
+    <li class="collection-item avatar">
+        <img src="/images/avatar1.jpg" class="circle">
+        <span class="title"> <p>Nome: <%= customer.nome %></p> </span>
+        <span class="title"> <p>Idade: <%= customer.idade %></p> </span>
+        <span class="title"> <p>Email: <%= customer.email %></p> </span>
+        <span class="title"> <p>telefone: <%= customer.telefone %></p> </span>
+        <span class="title"> <p>função: <%= customer.funcao %></p> </span>
+           <a href="/edit/<%= customer._id %>"> Editar  </a> </>
+           <a href="/delete/<%= customer._id %>" onclick="return confirm('Tem certeza que deseja excluir?');"> Deletar </a>
+        
+    
+    </li>
+    </ul>
+        <% }) %>
+</ul>
+<hr />
+<button class="botaoContato" type="submit"> <a href="/new">Cadastrar novo cliente</a></button>
+  </body>
+</html>
